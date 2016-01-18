@@ -3,6 +3,7 @@
  */
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TouchScript.Layers;
 
 namespace TouchScript.Examples
@@ -14,7 +15,7 @@ namespace TouchScript.Examples
 
         public void LoadNextLevel()
         {
-            Application.LoadLevel((Application.loadedLevel + 1)%Application.levelCount);
+//			SceneManager.LoadScene((SceneManager.GetActiveScene + 1)% SceneManager.sceneCoun);
         }
 
         private void Awake()
@@ -27,10 +28,10 @@ namespace TouchScript.Examples
 
             layer = GetComponent<UILayer>();
 
-            if (Application.loadedLevelName == "Examples" && Application.levelCount > 1)
-            {
-                LoadNextLevel();
-            }
+//            if (Application.loadedLevelName == "Examples" && Application.levelCount > 1)
+//            {
+//                LoadNextLevel();
+//            }
         }
 
         private void OnLevelWasLoaded(int num)
