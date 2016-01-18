@@ -38,7 +38,7 @@ public class Poo : MonoBehaviour, IOnTap {
 		
 		if (!hasSpawned)
 		{
-			spawn = Framework.Objects.Instantiate (PooPrefab, SpawnPosition.position, SpawnPosition.localRotation);
+			spawn = (GameObject)Instantiate (PooPrefab, SpawnPosition.position, SpawnPosition.localRotation);
 			SwitchGraphics (false);
 			hasSpawned = true;
 		}
