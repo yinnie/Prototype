@@ -5,7 +5,7 @@ namespace Thingiebox {
 
 		public class Layers {
 
-			public static bool isGameObjectinLayerMask(GameObject obj, LayerMask mask)
+			public static bool isGameObjectInLayerMask(GameObject obj, LayerMask mask)
 			{
 				int objMask = 1 << obj.layer;
 				if ((mask.value & objMask) > 0)
